@@ -8,9 +8,7 @@ const CORE_ASSETS = [
   "./script.js",
   "./questions.json",
   "./Noi_Dung_De_Thi_26_Cau.txt",
-  "./manifest.json",
-  "./icons/icon-192.png",
-  "./icons/icon-512.png"
+  "./manifest.json"
 ].map((path) => new URL(path, APP_SCOPE_URL).href);
 
 self.addEventListener("install", (event) => {
