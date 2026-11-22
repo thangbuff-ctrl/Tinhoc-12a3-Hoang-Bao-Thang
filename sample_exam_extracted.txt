@@ -1,0 +1,44 @@
+ĐỀ THI THỬ TỐT NGHIỆP THPT - MÔN TIN HỌC 12
+CHỦ ĐỀ: MẠNG MÁY TÍNH VÀ CƠ SỞ DỮ LIỆU
+(Tài liệu mẫu dùng để thử nghiệm tính năng Nạp đề thi tự động vào Web-App PWA)
+Câu 1: Thiết bị mạng nào đóng vai trò tìm đường và chuyển tiếp các gói tin giữa các mạng máy tính khác nhau?
+A. Bộ chuyển mạch (Switch)
+B. Bộ định tuyến (Router)
+C. Bộ lặp tín hiệu (Repeater)
+D. Cáp xoắn đôi
+Đáp án: B
+Giải thích: Router kiểm tra địa chỉ IP đích để định tuyến gói tin tối ưu.
+Câu 2: Giao thức mạng nào sau đây cung cấp phương thức truyền tải siêu văn bản an toàn có mã hóa giữa máy trạm và máy chủ?
+A. HTTP
+B. FTP
+C. HTTPS
+D. SMTP
+Đáp án: C
+Giải thích: HTTPS sử dụng chứng chỉ số SSL/TLS để mã hóa đường truyền dữ liệu.
+Câu 3: Địa chỉ nào sau đây có định dạng hợp lệ của một địa chỉ IPv4 tiêu chuẩn?
+A. 192.168.1.300
+B. 10.0.0.25
+C. 256.1.1.1
+D. 172.350.0.1
+Đáp án: B
+Giải thích: Mỗi số trong 4 nhóm của địa chỉ IPv4 chỉ được phép nằm trong khoảng 0 đến 255.
+Câu 4: Trong cơ sở dữ liệu quan hệ, thuộc tính Khóa chính (Primary Key) có đặc tính cốt lõi nào?
+A. Cho phép chứa giá trị rỗng (NULL)
+B. Xác định duy nhất mỗi bản ghi trong bảng
+C. Cho phép các hàng có giá trị trùng lặp nhau
+D. Chỉ được phép lưu trữ số nguyên dương
+Đáp án: B
+Giải thích: Khóa chính dùng để phân biệt duy nhất từng hàng dữ liệu trong bảng.
+Câu 5: Câu lệnh SQL nào sau đây được sử dụng để truy vấn và trích xuất dữ liệu từ các bảng?
+A. INSERT INTO
+B. SELECT
+C. UPDATE
+D. DELETE
+Đáp án: B
+Giải thích: Cú pháp SELECT dùng để lọc và hiển thị thông tin từ cơ sở dữ liệu.
+Câu 6: Một nhóm học sinh xây dựng Web-App ôn tập Tin học 12 dạng PWA. Mỗi phát biểu sau đây là đúng hay sai?
+a) Nền tảng GitHub Pages tự động cung cấp giao thức HTTPS bảo mật, đây là điều kiện bắt buộc để Service Worker kích hoạt. (Đúng)
+b) Khi người dùng bật Chế độ máy bay, điện thoại vẫn có thể nhận câu hỏi mới từ máy chủ nhờ giao thức DHCP. (Sai)
+c) Tệp manifest.json định nghĩa biểu tượng và tên ứng dụng để cài đặt ra màn hình chính điện thoại như ứng dụng độc lập. (Đúng)
+d) Bộ nhớ đệm (Cache Storage) cho phép ứng dụng đọc dữ liệu và vận hành bình thường ngay cả khi không có kết nối Internet. (Đúng)
+Lời giải: Ý b sai vì khi bật Chế độ máy bay, mọi kết nối mạng đều bị ngắt hoàn toàn.

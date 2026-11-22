@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1976d2">
+  <meta name="description" content="Ứng dụng PWA ôn tập Tin học 12, nạp đề Word hoặc văn bản, chấm điểm và hỗ trợ học tập ngoại tuyến.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Ôn Tập Tin Học 12 – PWA Ngoại Tuyến</title>
+  <link rel="manifest" href="./manifest.json">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" type="image/png" href="./icons/icon-192.png">
+  <link rel="apple-touch-icon" href="./icons/icon-192.png">
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <div class="header-left">
+        <span class="app-badge">PWA</span>
+        <h1 class="app-title">TIN HỌC 12</h1>
+      </div>
+      <div class="header-right">
+        <button id="btn-open-import" class="btn-icon" type="button" title="Nạp đề thi Word hoặc dán văn bản">
+          📁 Nạp đề
+        </button>
+        <span id="connection-badge" class="badge-online" role="status">Đang kiểm tra mạng...</span>
+      </div>
+    </header>
+
+    <div class="exam-status-bar">
+      <div class="exam-info">
+        <span class="exam-icon" aria-hidden="true">📖</span>
+        <span id="exam-source-title">Đề thi: Đang tải ngân hàng...</span>
+      </div>
+      <button id="btn-reset-default" class="btn-link hidden" type="button" onclick="resetToDefaultExam()">Khôi phục mặc định</button>
+    </div>
+
+    <section class="progress-section" aria-label="Tiến trình làm bài">
+      <div class="progress-info">
+        <span id="progress-text">Câu 0 / 0</span>
+        <span id="current-score-text">Điểm: 0.00</span>
+      </div>
+      <div class="progress-bar-bg">
+        <div id="progress-bar-fill" class="progress-bar-fill" role="progressbar"
+             aria-label="Tiến trình câu hỏi" aria-valuemin="0" aria-valuemax="0"
+             aria-valuenow="0" style="width: 0%;"></div>
+      </div>
+    </section>
+
+    <main class="main-content">
+      <section id="quiz-card" class="quiz-card" aria-live="polite">
+        <div class="card-header">
+          <span id="question-topic" class="badge-topic">Tin học 12</span>
+          <span id="question-type-badge" class="badge-type">Trắc nghiệm</span>
+        </div>
+
+        <div id="question-body" class="question-body">
+          <p id="question-text" class="question-text">Đang nạp ngân hàng câu hỏi...</p>
+        </div>
+
+        <div id="options-container" class="options-container"></div>
+
+        <div id="explanation-box" class="explanation-box hidden" aria-live="polite">
+          <div class="explanation-title">Đáp án và giải thích:</div>
+          <div id="explanation-text" class="explanation-text"></div>
+        </div>
+      </section>
+
+      <section id="result-screen" class="result-screen hidden" aria-live="polite">
+        <div class="result-card">
+          <div class="trophy-icon" aria-hidden="true">🏆</div>
+          <h2 class="result-title">KẾT QUẢ ÔN TẬP</h2>
+          <div class="score-display">
+            <span id="final-score" class="big-score">0.0</span>
+            <span class="max-score">/ 10.0</span>
+          </div>
+          <p id="result-evaluation" class="result-evaluation">Hoàn thành bài làm!</p>
+
+          <div class="result-stats">
+            <div class="stat-item">
+              <span class="stat-label">Tỷ lệ điểm</span>
+              <span id="stat-percent" class="stat-value text-primary">0%</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Tổng câu</span>
+              <span id="stat-total-q" class="stat-value">0</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Đúng trọn câu</span>
+              <span id="stat-correct" class="stat-value">0</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Chưa trọn câu</span>
+              <span id="stat-incorrect" class="stat-value">0</span>
+            </div>
+          </div>
+
+          <div class="result-actions">
+            <button class="btn btn-primary" type="button" onclick="restartQuiz()">Làm lại đề thi</button>
+            <button class="btn btn-secondary" type="button" onclick="restartWithShuffle()">Xáo trộn ngẫu nhiên</button>
+            <button class="btn btn-outline" type="button" onclick="openImportModal()">Nạp đề thi khác</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="quiz-footer" class="app-footer">
+      <button id="btn-submit" class="btn btn-action" type="button" onclick="handleSubmitAnswer()">Kiểm tra đáp án</button>
+      <button id="btn-next" class="btn btn-primary hidden" type="button" onclick="handleNextQuestion()">Câu tiếp theo ❯</button>
+    </footer>
+
+    <div id="import-modal" class="modal-backdrop hidden">
+      <section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="import-modal-title">
+        <div class="modal-header">
+          <div class="modal-title-group">
+            <h2 id="import-modal-title" class="modal-title">Nạp đề thi tự động</h2>
+            <span class="modal-subtitle">Đọc tệp Word (.docx) hoặc dán văn bản từ PDF, sách và website.</span>
+          </div>
+          <button class="btn-close-modal" type="button" aria-label="Đóng cửa sổ" onclick="closeImportModal()">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <div class="format-guide-box">
+            <strong>Định dạng được hỗ trợ:</strong>
+            <ul>
+              <li><strong>ABCD:</strong> Câu 1: ...; A. ...; B. ...; C. ...; D. ...; Đáp án: B.</li>
+              <li><strong>Đúng/Sai:</strong> Câu 2: ...; a) ... (Đúng); b) ... (Sai); c) ...; d) ... hoặc dòng đáp án tổng hợp.</li>
+              <li>Câu trắc nghiệm phải đủ 4 phương án và có đáp án. Câu Đúng/Sai phải đủ 4 nhận định và đủ đáp án.</li>
+            </ul>
+          </div>
+
+          <div class="modal-tabs" role="tablist" aria-label="Chọn nguồn đề">
+            <button id="tab-btn-docx" class="modal-tab active" type="button" role="tab" aria-selected="true">📄 Tải tệp Word (.docx)</button>
+            <button id="tab-btn-text" class="modal-tab" type="button" role="tab" aria-selected="false">📋 Dán văn bản</button>
+          </div>
+
+          <div id="tab-content-docx" class="tab-content">
+            <div class="file-dropzone" role="button" tabindex="0" aria-label="Chọn tệp Word .docx" onclick="document.getElementById('docx-input').click()">
+              <div class="dropzone-icon" aria-hidden="true">📁</div>
+              <p class="dropzone-text"><strong>Bấm để chọn tệp .docx</strong></p>
+              <p class="dropzone-sub">Tài liệu được đọc trực tiếp trên thiết bị, không tải lên máy chủ. Giới hạn 12 MB.</p>
+              <input type="file" id="docx-input" accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document" hidden>
+            </div>
+            <div id="docx-filename-badge" class="file-name-badge hidden">
+              <span>Đã chọn: <strong id="docx-filename-text"></strong></span>
+            </div>
+          </div>
+
+          <div id="tab-content-text" class="tab-content hidden">
+            <label class="tab-hint" for="paste-text-input">
+              Sao chép văn bản từ sách PDF, tài liệu Word hoặc website và dán vào khung dưới:
+            </label>
+            <div class="paste-tools">
+              <button id="btn-fill-default-text" class="btn btn-secondary btn-small" type="button">Chèn sẵn nội dung 26 câu</button>
+              <button id="btn-clear-paste-text" class="btn btn-secondary btn-small" type="button">Xóa nội dung</button>
+              <a class="download-text-link" href="./Noi_Dung_De_Thi_26_Cau.txt" download="Noi_Dung_De_Thi_26_Cau.txt">Tải file TXT</a>
+            </div>
+            <textarea id="paste-text-input" class="paste-textarea" rows="16"
+              aria-label="Nội dung đề thi cần phân tích"
+              placeholder="Dán nội dung đề thi vào đây...&#10;&#10;Ví dụ:&#10;Câu 1: Thiết bị nào...&#10;A. ...&#10;B. ...&#10;C. ...&#10;D. ...&#10;Đáp án: B&#10;Giải thích: ..."></textarea>
+            <p class="paste-note">Có thể dán toàn bộ 26 câu hoặc bấm “Chèn sẵn nội dung 26 câu” để thử ngay. Nội dung phải có đủ đáp án và lời giải.</p>
+          </div>
+
+          <div id="import-msg" class="import-msg hidden" role="status" aria-live="polite"></div>
+          <div id="import-preview" class="import-preview hidden" aria-live="polite"></div>
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" onclick="closeImportModal()">Đóng</button>
+          <button id="btn-do-import" class="btn btn-primary" type="button">Phân tích đề thi</button>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>

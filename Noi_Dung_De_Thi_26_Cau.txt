@@ -1,0 +1,178 @@
+ĐỀ ÔN TẬP TIN HỌC 12
+CHỦ ĐỀ: MẠNG MÁY TÍNH VÀ CƠ SỞ DỮ LIỆU
+(Ngân hàng gồm 6 câu mẫu gốc và 20 câu hỏi mở rộng)
+
+Câu 1: Thiết bị mạng nào đóng vai trò tìm đường và chuyển tiếp các gói tin giữa các mạng máy tính khác nhau?
+A. Bộ chuyển mạch (Switch)
+B. Bộ định tuyến (Router)
+C. Bộ lặp tín hiệu (Repeater)
+D. Cáp xoắn đôi
+Đáp án: B
+Giải thích: Router kiểm tra địa chỉ IP đích để định tuyến gói tin tối ưu.
+Câu 2: Giao thức mạng nào sau đây cung cấp phương thức truyền tải siêu văn bản an toàn có mã hóa giữa máy trạm và máy chủ?
+A. HTTP
+B. FTP
+C. HTTPS
+D. SMTP
+Đáp án: C
+Giải thích: HTTPS sử dụng chứng chỉ số SSL/TLS để mã hóa đường truyền dữ liệu.
+Câu 3: Địa chỉ nào sau đây có định dạng hợp lệ của một địa chỉ IPv4 tiêu chuẩn?
+A. 192.168.1.300
+B. 10.0.0.25
+C. 256.1.1.1
+D. 172.350.0.1
+Đáp án: B
+Giải thích: Mỗi số trong 4 nhóm của địa chỉ IPv4 chỉ được phép nằm trong khoảng 0 đến 255.
+Câu 4: Trong cơ sở dữ liệu quan hệ, thuộc tính Khóa chính (Primary Key) có đặc tính cốt lõi nào?
+A. Cho phép chứa giá trị rỗng (NULL)
+B. Xác định duy nhất mỗi bản ghi trong bảng
+C. Cho phép các hàng có giá trị trùng lặp nhau
+D. Chỉ được phép lưu trữ số nguyên dương
+Đáp án: B
+Giải thích: Khóa chính dùng để phân biệt duy nhất từng hàng dữ liệu trong bảng.
+Câu 5: Câu lệnh SQL nào sau đây được sử dụng để truy vấn và trích xuất dữ liệu từ các bảng?
+A. INSERT INTO
+B. SELECT
+C. UPDATE
+D. DELETE
+Đáp án: B
+Giải thích: Cú pháp SELECT dùng để lọc và hiển thị thông tin từ cơ sở dữ liệu.
+Câu 6: Một nhóm học sinh xây dựng Web-App ôn tập Tin học 12 dạng PWA. Mỗi phát biểu sau đây là đúng hay sai?
+a) Nền tảng GitHub Pages tự động cung cấp giao thức HTTPS bảo mật, đây là điều kiện bắt buộc để Service Worker kích hoạt. (Đúng)
+b) Khi người dùng bật Chế độ máy bay, điện thoại vẫn có thể nhận câu hỏi mới từ máy chủ nhờ giao thức DHCP. (Sai)
+c) Tệp manifest.json định nghĩa biểu tượng và tên ứng dụng để cài đặt ra màn hình chính điện thoại như ứng dụng độc lập. (Đúng)
+d) Bộ nhớ đệm (Cache Storage) cho phép ứng dụng đọc dữ liệu và vận hành bình thường ngay cả khi không có kết nối Internet. (Đúng)
+Lời giải: Ý b sai vì khi bật Chế độ máy bay, mọi kết nối mạng đều bị ngắt hoàn toàn.
+
+Câu 7: Trong phòng máy của trường, nhiều máy tính cần tự động nhận địa chỉ IP và các thông số cấu hình mạng khi kết nối vào mạng LAN. Dịch vụ nào thực hiện chức năng này?
+A. DHCP
+B. DNS
+C. HTTP
+D. FTP
+Đáp án: A
+Giải thích: DHCP (Dynamic Host Configuration Protocol) cấp phát cấu hình mạng cho máy khách, thường gồm địa chỉ IP và có thể cả subnet mask, default gateway, DNS server. DNS có chức năng phân giải tên miền; HTTP và FTP là các giao thức ứng dụng.
+Câu 8: Khi switch lớp 2 nhận được một khung Ethernet, thiết bị thường tra cứu thông tin nào để quyết định chuyển tiếp khung ra cổng phù hợp?
+A. Tên miền của máy nhận
+B. Địa chỉ MAC đích trong bảng địa chỉ MAC
+C. Địa chỉ email của người gửi
+D. Số hiệu cổng của ứng dụng web
+Đáp án: B
+Giải thích: Switch lớp 2 học địa chỉ MAC nguồn và cổng tương ứng. Khi chuyển tiếp khung, switch tra địa chỉ MAC đích trong bảng MAC để xác định cổng ra. Nếu chưa biết địa chỉ đích, switch có thể phát tán khung trong phạm vi VLAN theo quy tắc chuyển mạch.
+Câu 9: Địa chỉ nào sau đây thuộc dải địa chỉ IPv4 riêng được sử dụng trong mạng nội bộ theo RFC 1918?
+A. 8.8.8.8
+B. 172.20.15.8
+C. 172.32.1.5
+D. 192.0.2.10
+Đáp án: B
+Giải thích: RFC 1918 dành riêng các dải 10.0.0.0/8, 172.16.0.0/12 và 192.168.0.0/16 cho mạng riêng. Địa chỉ 172.20.15.8 thuộc dải 172.16.0.0–172.31.255.255; 172.32.1.5 nằm ngoài dải này.
+Câu 10: Trong mạng của một trường học, quản trị viên muốn đặt quy tắc cho phép hoặc chặn lưu lượng mạng dựa trên các tiêu chí bảo mật. Thiết bị hoặc chức năng nào phù hợp nhất?
+A. Bộ lặp tín hiệu (Repeater)
+B. Bộ chuyển mạch không quản lý
+C. Tường lửa (Firewall)
+D. Cáp mạng Ethernet
+Đáp án: C
+Giải thích: Tường lửa áp dụng các quy tắc để cho phép hoặc chặn lưu lượng mạng. Quy tắc có thể xét địa chỉ IP, cổng và giao thức. Repeater chỉ khuếch đại/tái tạo tín hiệu; cáp mạng là môi trường truyền dẫn.
+Câu 11: Một ứng dụng cần truyền dữ liệu qua mạng với yêu cầu dữ liệu đến đúng thứ tự và có cơ chế phát hiện mất gói, truyền lại khi cần. Trong mô hình TCP/IP truyền thống, giao thức tầng vận chuyển nào phù hợp nhất?
+A. UDP
+B. TCP
+C. ARP
+D. DHCP
+Đáp án: B
+Giải thích: TCP cung cấp dịch vụ truyền luồng byte tin cậy và đúng thứ tự; cơ chế số thứ tự, xác nhận và truyền lại giúp xử lý mất dữ liệu. UDP có cơ chế đơn giản hơn và không bảo đảm giao hàng hoặc thứ tự. ARP và DHCP không phải giao thức vận chuyển cho yêu cầu này.
+Câu 12: Trong cùng một mạng LAN, hai máy tính cùng được cấu hình địa chỉ IPv4 192.168.1.20 và thường xuyên mất kết nối hoặc kết nối chập chờn. Cách xử lý phù hợp nhất là gì?
+A. Đặt hai máy dùng chung một địa chỉ IP để đồng bộ
+B. Đổi tên miền của website đang truy cập
+C. Cấu hình lại để mỗi máy sử dụng một địa chỉ IP duy nhất trong mạng
+D. Tắt hoàn toàn tường lửa trên tất cả máy tính
+Đáp án: C
+Giải thích: Hai thiết bị cùng sử dụng một địa chỉ IPv4 trên cùng liên kết mạng có thể gây xung đột địa chỉ, làm việc phân giải ARP và truyền thông không ổn định. Cần xác định thiết bị bị trùng và cấu hình địa chỉ IP duy nhất cho từng máy.
+Câu 13: Xét chức năng của hai dịch vụ mạng DHCP và DNS trong mạng máy tính. Mỗi nhận định sau đây là đúng hay sai?
+a) DNS giúp phân giải tên miền thành địa chỉ IP tương ứng. (Đúng)
+b) DHCP có thể tự động cấp phát địa chỉ IP và một số thông số cấu hình mạng cho máy khách. (Đúng)
+c) DNS là dịch vụ chịu trách nhiệm cấp phát địa chỉ IP động cho máy tính vừa kết nối mạng. (Sai)
+d) DHCP có chức năng chính là mã hóa nội dung trang web giữa trình duyệt và máy chủ. (Sai)
+Lời giải: a đúng: DNS phân giải tên miền thành địa chỉ IP. b đúng: DHCP cấp phát địa chỉ IP và có thể cung cấp các thông số cấu hình mạng. c sai: cấp phát cấu hình IP là chức năng của DHCP, không phải DNS. d sai: DHCP không mã hóa nội dung web; HTTPS/TLS đảm nhiệm bảo vệ dữ liệu truyền tải web.
+Câu 14: Xét cách switch lớp 2 học địa chỉ MAC và xử lý khung Ethernet khi chưa biết địa chỉ đích. Mỗi nhận định sau đây là đúng hay sai?
+a) Switch có thể học địa chỉ MAC nguồn cùng cổng nhận khung để cập nhật bảng địa chỉ MAC. (Đúng)
+b) Nếu địa chỉ MAC đích đã có trong bảng, switch có thể chuyển khung ra cổng tương ứng. (Đúng)
+c) Nếu chưa biết địa chỉ MAC đích, switch lớp 2 luôn loại bỏ khung ngay mà không chuyển tiếp. (Sai)
+d) Khi địa chỉ MAC đích chưa có trong bảng, switch có thể phát tán khung ra các cổng khác trong cùng VLAN, ngoại trừ cổng nhận. (Đúng)
+Lời giải: a đúng: switch học địa chỉ MAC nguồn và cổng nhận. b đúng: địa chỉ đích đã biết được ánh xạ sang cổng ra trong bảng MAC. c sai: địa chỉ đích chưa biết thường dẫn đến flooding trong cùng VLAN, không phải luôn loại bỏ. d đúng: switch phát tán khung đến các cổng khác trong VLAN, không gửi ngược lại cổng nhận.
+Câu 15: Một máy tính có địa chỉ 192.168.10.25/24. Xét ý nghĩa của địa chỉ mạng và subnet mask. Mỗi nhận định sau đây là đúng hay sai?
+a) Ký hiệu /24 cho biết 24 bit đầu tiên của địa chỉ được dùng làm phần mạng. (Đúng)
+b) Địa chỉ mạng tương ứng của 192.168.10.25/24 là 192.168.10.0. (Đúng)
+c) Địa chỉ 192.168.11.25/24 thuộc cùng mạng con với 192.168.10.25/24. (Sai)
+d) Subnet mask được sử dụng để mã hóa nội dung dữ liệu truyền qua Internet. (Sai)
+Lời giải: a đúng: /24 biểu thị độ dài tiền tố mạng là 24 bit. b đúng: với mask 255.255.255.0, địa chỉ mạng là 192.168.10.0. c sai: octet thứ ba khác nhau nên hai địa chỉ thuộc hai mạng /24 khác nhau. d sai: subnet mask xác định phần mạng/phần máy chủ, không mã hóa dữ liệu.
+Câu 16: Một máy tính trong phòng thực hành cần gửi dữ liệu đến máy khác trong cùng mạng con và đến một máy chủ ở mạng khác. Xét vai trò của cổng mặc định (default gateway). Mỗi nhận định sau đây là đúng hay sai?
+a) Khi đích nằm trong cùng mạng con, máy tính có thể gửi dữ liệu trực tiếp đến thiết bị đích mà không cần chuyển qua default gateway. (Đúng)
+b) Khi đích nằm ngoài mạng con cục bộ, máy tính thường gửi gói tin đến default gateway để được định tuyến tiếp. (Đúng)
+c) Default gateway có chức năng chính là chuyển đổi tên miền thành địa chỉ IP. (Sai)
+d) Default gateway và máy chủ DNS luôn là cùng một dịch vụ và không thể tách riêng. (Sai)
+Lời giải: a đúng: thiết bị cùng subnet có thể liên lạc trực tiếp ở mạng cục bộ. b đúng: lưu lượng đến mạng khác thường được gửi đến router/default gateway. c sai: phân giải tên miền là chức năng DNS. d sai: default gateway và DNS là hai vai trò mạng khác nhau, dù trong một số mạng chúng có thể cùng nằm trên một thiết bị.
+Câu 17: Trong một bảng của cơ sở dữ liệu quan hệ, mỗi hàng dữ liệu thường biểu diễn thành phần nào?
+A. Một bản ghi (record)
+B. Một thuộc tính (attribute)
+C. Một cơ sở dữ liệu độc lập
+D. Một câu lệnh SQL
+Đáp án: A
+Giải thích: Trong bảng quan hệ, mỗi hàng biểu diễn một bản ghi (record/tuple), còn mỗi cột biểu diễn một trường hoặc thuộc tính (field/attribute).
+Câu 18: Cơ sở dữ liệu có hai bảng KhachHang(MaKH, HoTen) và DonHang(MaDH, NgayDat, MaKH). Nếu MaKH là khóa chính của bảng KhachHang, MaKH trong bảng DonHang thường được dùng làm gì?
+A. Khóa chính để mỗi đơn hàng có mã khách hàng duy nhất
+B. Khóa ngoại tham chiếu đến MaKH trong bảng KhachHang
+C. Thuộc tính để tự động tính tổng tiền đơn hàng
+D. Thuộc tính để sắp xếp tên khách hàng theo alphabet
+Đáp án: B
+Giải thích: MaKH trong DonHang là khóa ngoại tham chiếu đến khóa chính MaKH của KhachHang. Nhờ đó, mỗi đơn hàng được liên kết với khách hàng tương ứng và cơ sở dữ liệu có thể duy trì tính toàn vẹn tham chiếu.
+Câu 19: Trong câu lệnh SQL `SELECT HoTen FROM HocSinh WHERE Diem >= 8;`, mệnh đề WHERE có tác dụng gì?
+A. Sắp xếp học sinh theo họ tên
+B. Chỉ lấy các bản ghi có điểm từ 8 trở lên
+C. Xóa các học sinh có điểm dưới 8
+D. Thêm một học sinh mới có điểm bằng 8
+Đáp án: B
+Giải thích: WHERE đặt điều kiện lọc các hàng. Câu lệnh chỉ truy xuất cột HoTen của những học sinh có Diem lớn hơn hoặc bằng 8; câu lệnh không xóa hay thêm dữ liệu.
+Câu 20: Trong câu lệnh `SELECT HoTen, Diem FROM HocSinh ORDER BY Diem DESC;`, kết quả được sắp xếp như thế nào?
+A. Theo họ tên từ A đến Z
+B. Theo điểm từ thấp đến cao
+C. Theo điểm từ cao xuống thấp
+D. Chỉ hiển thị học sinh có điểm cao nhất
+Đáp án: C
+Giải thích: ORDER BY sắp xếp các hàng theo cột được chỉ định. DESC là thứ tự giảm dần, nên điểm cao được hiển thị trước; câu lệnh không giới hạn chỉ một học sinh.
+Câu 21: Một giáo viên muốn thêm một học sinh mới vào bảng HocSinh. Câu lệnh SQL nào phù hợp để chèn một bản ghi mới?
+A. INSERT INTO HocSinh(MaHS, HoTen, Diem) VALUES ('HS02', 'Lan', 9);
+B. UPDATE HocSinh SET HoTen = 'Lan' WHERE MaHS = 'HS02';
+C. DELETE FROM HocSinh WHERE MaHS = 'HS02';
+D. SELECT HoTen FROM HocSinh WHERE MaHS = 'HS02';
+Đáp án: A
+Giải thích: INSERT INTO được dùng để thêm một bản ghi mới vào bảng. Danh sách cột cho biết các trường được chèn và VALUES cung cấp giá trị tương ứng. UPDATE sửa bản ghi đã có; DELETE xóa bản ghi; SELECT truy xuất dữ liệu.
+Câu 22: Bảng HocSinh có các cột MaHS, HoTen, Diem. Muốn lấy họ tên của những học sinh có điểm từ 8 trở lên, câu lệnh nào đúng?
+A. SELECT HoTen FROM HocSinh WHERE Diem >= 8;
+B. DELETE HoTen FROM HocSinh WHERE Diem >= 8;
+C. UPDATE HocSinh SET HoTen WHERE Diem >= 8;
+D. INSERT INTO HocSinh(HoTen) WHERE Diem >= 8;
+Đáp án: A
+Giải thích: SELECT HoTen chỉ định cột cần lấy; FROM HocSinh xác định bảng; WHERE Diem >= 8 lọc các hàng thỏa điều kiện. Các phương án còn lại dùng sai cú pháp hoặc sai mục đích thao tác.
+Câu 23: Một cửa hàng có bảng KhachHang và bảng DonHang, trong đó mỗi khách hàng có thể đặt nhiều đơn hàng. Xét quan hệ giữa hai bảng. Mỗi nhận định sau đây là đúng hay sai?
+a) Một khách hàng có thể liên kết với nhiều bản ghi đơn hàng khác nhau. (Đúng)
+b) Trong quan hệ một-nhiều, khóa ngoại thường được đặt ở bảng thuộc phía nhiều, ở tình huống này là bảng DonHang. (Đúng)
+c) MaKH trong bảng DonHang bắt buộc phải có giá trị khác nhau ở mọi đơn hàng, kể cả khi một khách hàng đặt nhiều đơn. (Sai)
+d) Quan hệ một-nhiều có nghĩa là mỗi khách hàng chỉ được phép có tối đa một đơn hàng. (Sai)
+Lời giải: a đúng: một khách hàng có thể đặt nhiều đơn. b đúng: khóa ngoại thường nằm ở phía nhiều. c sai: MaKH được phép lặp trong DonHang để thể hiện nhiều đơn cùng thuộc một khách hàng. d sai: phát biểu mô tả quan hệ một-một, không phải một-nhiều.
+Câu 24: Xét khóa ngoại MaKH trong bảng DonHang tham chiếu đến khóa chính MaKH trong bảng KhachHang. Mỗi nhận định sau đây là đúng hay sai?
+a) Khóa ngoại MaKH trong DonHang có thể lặp lại nếu một khách hàng có nhiều đơn hàng. (Đúng)
+b) Khi ràng buộc được thực thi và giá trị khóa ngoại không phải NULL, giá trị đó phải khớp với một giá trị được tham chiếu trong bảng KhachHang. (Đúng)
+c) Mọi cột khóa ngoại đều mặc nhiên phải có giá trị duy nhất trong bảng chứa nó. (Sai)
+d) Khóa ngoại được sử dụng chủ yếu để sắp xếp dữ liệu theo thứ tự chữ cái. (Sai)
+Lời giải: a đúng: khóa ngoại không mặc nhiên phải duy nhất. b đúng: ràng buộc khóa ngoại bảo đảm tính toàn vẹn tham chiếu; nếu cột cho phép NULL thì giá trị NULL không tham chiếu đến một hàng cụ thể. c sai: chỉ khi có thêm ràng buộc UNIQUE mới yêu cầu không trùng. d sai: khóa ngoại biểu diễn liên kết giữa các bảng, không phải chức năng sắp xếp.
+Câu 25: Xét các câu lệnh DELETE trong SQL khi làm việc với bảng HocSinh. Mỗi nhận định sau đây là đúng hay sai?
+a) Câu lệnh `DELETE FROM HocSinh WHERE MaLop = '12A1';` xóa những bản ghi thỏa mãn điều kiện MaLop = '12A1'. (Đúng)
+b) Câu lệnh `DELETE FROM HocSinh;` xóa cả cấu trúc bảng HocSinh khỏi cơ sở dữ liệu. (Sai)
+c) Nếu không có WHERE, `DELETE FROM HocSinh;` có thể xóa toàn bộ các hàng dữ liệu nhưng không xóa cấu trúc bảng. (Đúng)
+d) Nếu bỏ WHERE khỏi câu lệnh DELETE, hệ quản trị chỉ xóa bản ghi đầu tiên trong bảng. (Sai)
+Lời giải: a đúng: WHERE giới hạn các hàng bị xóa. b sai: DELETE xóa dữ liệu, không xóa định nghĩa bảng. c đúng: không có WHERE thì tất cả hàng trong bảng là đối tượng bị xóa. d sai: câu lệnh không có WHERE không chỉ xóa hàng đầu tiên.
+Câu 26: Xét câu lệnh cập nhật điểm `UPDATE HocSinh SET Diem = 9 WHERE MaHS = 'HS001';`. Mỗi nhận định sau đây là đúng hay sai?
+a) Mệnh đề SET chỉ định cột và giá trị mới cần cập nhật. (Đúng)
+b) Mệnh đề WHERE giới hạn việc cập nhật vào bản ghi có MaHS = 'HS001'. (Đúng)
+c) Nếu bỏ WHERE, câu lệnh UPDATE trên có thể cập nhật điểm của tất cả bản ghi trong bảng. (Đúng)
+d) UPDATE là câu lệnh dùng để thêm một bản ghi mới vào bảng. (Sai)
+Lời giải: a đúng: SET khai báo giá trị mới. b đúng: WHERE chọn các hàng cần thay đổi. c đúng: nếu bỏ WHERE, mọi hàng trong bảng có thể bị cập nhật. d sai: INSERT INTO dùng để thêm bản ghi; UPDATE sửa dữ liệu đã có.

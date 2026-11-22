@@ -1,0 +1,501 @@
+[
+  {
+    "id": 1,
+    "type": "multiple_choice",
+    "topic": "Chủ đề B: Mạng máy tính",
+    "question": "Thiết bị mạng nào đóng vai trò tìm đường và chuyển tiếp các gói tin giữa các mạng máy tính khác nhau?",
+    "options": [
+      "Bộ chuyển mạch (Switch)",
+      "Bộ định tuyến (Router)",
+      "Bộ lặp tín hiệu (Repeater)",
+      "Cáp xoắn đôi"
+    ],
+    "answer": 1,
+    "explanation": "Router kiểm tra địa chỉ IP đích để định tuyến gói tin tối ưu."
+  },
+  {
+    "id": 2,
+    "type": "multiple_choice",
+    "topic": "Chủ đề B: Mạng máy tính",
+    "question": "Giao thức mạng nào sau đây cung cấp phương thức truyền tải siêu văn bản an toàn có mã hóa giữa máy trạm và máy chủ?",
+    "options": [
+      "HTTP",
+      "FTP",
+      "HTTPS",
+      "SMTP"
+    ],
+    "answer": 2,
+    "explanation": "HTTPS sử dụng chứng chỉ số SSL/TLS để mã hóa đường truyền dữ liệu."
+  },
+  {
+    "id": 3,
+    "type": "multiple_choice",
+    "topic": "Chủ đề B: Mạng máy tính",
+    "question": "Địa chỉ nào sau đây có định dạng hợp lệ của một địa chỉ IPv4 tiêu chuẩn?",
+    "options": [
+      "192.168.1.300",
+      "10.0.0.25",
+      "256.1.1.1",
+      "172.350.0.1"
+    ],
+    "answer": 1,
+    "explanation": "Mỗi số trong 4 nhóm của địa chỉ IPv4 chỉ được phép nằm trong khoảng 0 đến 255."
+  },
+  {
+    "id": 4,
+    "type": "multiple_choice",
+    "topic": "Chủ đề F: Hệ cơ sở dữ liệu",
+    "question": "Trong cơ sở dữ liệu quan hệ, thuộc tính Khóa chính (Primary Key) có đặc tính cốt lõi nào?",
+    "options": [
+      "Cho phép chứa giá trị rỗng (NULL)",
+      "Xác định duy nhất mỗi bản ghi trong bảng",
+      "Cho phép các hàng có giá trị trùng lặp nhau",
+      "Chỉ được phép lưu trữ số nguyên dương"
+    ],
+    "answer": 1,
+    "explanation": "Khóa chính dùng để phân biệt duy nhất từng hàng dữ liệu trong bảng."
+  },
+  {
+    "id": 5,
+    "type": "multiple_choice",
+    "topic": "Chủ đề F: Hệ cơ sở dữ liệu",
+    "question": "Câu lệnh SQL nào sau đây được sử dụng để truy vấn và trích xuất dữ liệu từ các bảng?",
+    "options": [
+      "INSERT INTO",
+      "SELECT",
+      "UPDATE",
+      "DELETE"
+    ],
+    "answer": 1,
+    "explanation": "Cú pháp SELECT dùng để lọc và hiển thị thông tin từ cơ sở dữ liệu."
+  },
+  {
+    "id": 6,
+    "type": "true_false",
+    "topic": "Chủ đề B: Mạng máy tính",
+    "question": "Một nhóm học sinh xây dựng Web-App ôn tập Tin học 12 dạng PWA. Mỗi phát biểu sau đây là đúng hay sai?",
+    "items": [
+      {
+        "label": "a",
+        "statement": "Nền tảng GitHub Pages tự động cung cấp giao thức HTTPS bảo mật, đây là điều kiện bắt buộc để Service Worker kích hoạt.",
+        "answer": true
+      },
+      {
+        "label": "b",
+        "statement": "Khi người dùng bật Chế độ máy bay, điện thoại vẫn có thể nhận câu hỏi mới từ máy chủ nhờ giao thức DHCP.",
+        "answer": false
+      },
+      {
+        "label": "c",
+        "statement": "Tệp manifest.json định nghĩa biểu tượng và tên ứng dụng để cài đặt ra màn hình chính điện thoại như ứng dụng độc lập.",
+        "answer": true
+      },
+      {
+        "label": "d",
+        "statement": "Bộ nhớ đệm (Cache Storage) cho phép ứng dụng đọc dữ liệu và vận hành bình thường ngay cả khi không có kết nối Internet.",
+        "answer": true
+      }
+    ],
+    "explanation": "Ý b sai vì khi bật Chế độ máy bay, mọi kết nối mạng đều bị ngắt hoàn toàn."
+  },
+  {
+    "id": 7,
+    "type": "multiple_choice",
+    "topic": "Chủ đề B: Mạng máy tính",
+    "question": "Trong phòng máy của trường, nhiều máy tính cần tự động nhận địa chỉ IP và các thông số cấu hình mạng khi kết nối vào mạng LAN. Dịch vụ nào thực hiện chức năng này?",
+    "options": [
+      "DHCP",
+      "DNS",
+      "HTTP",
+      "FTP"
+    ],
+    "answer": 0,
+    "explanation": "DHCP (Dynamic Host Configuration Protocol) cấp phát cấu hình mạng cho máy khách, thường gồm địa chỉ IP và có thể cả subnet mask, default gateway, DNS server. DNS có chức năng phân giải tên miền; HTTP và FTP là các giao thức ứng dụng."
+  },
+  {
+    "id": 8,
+    "type": "multiple_choice",
+    "topic": "Chủ đề B: Mạng máy tính",
+    "question": "Khi switch lớp 2 nhận được một khung Ethernet, thiết bị thường tra cứu thông tin nào để quyết định chuyển tiếp khung ra cổng phù hợp?",
+    "options": [
+      "Tên miền của máy nhận",
+      "Địa chỉ MAC đích trong bảng địa chỉ MAC",
+      "Địa chỉ email của người gửi",
+      "Số hiệu cổng của ứng dụng web"
+    ],
+    "answer": 1,
+    "explanation": "Switch lớp 2 học địa chỉ MAC nguồn và cổng tương ứng. Khi chuyển tiếp khung, switch tra địa chỉ MAC đích trong bảng MAC để xác định cổng ra. Nếu chưa biết địa chỉ đích, switch có thể phát tán khung trong phạm vi VLAN theo quy tắc chuyển mạch."
+  },
+  {
+    "id": 9,
+    "type": "multiple_choice",
+    "topic": "Chủ đề B: Mạng máy tính",
+    "question": "Địa chỉ nào sau đây thuộc dải địa chỉ IPv4 riêng được sử dụng trong mạng nội bộ theo RFC 1918?",
+    "options": [
+      "8.8.8.8",
+      "172.20.15.8",
+      "172.32.1.5",
+      "192.0.2.10"
+    ],
+    "answer": 1,
+    "explanation": "RFC 1918 dành riêng các dải 10.0.0.0/8, 172.16.0.0/12 và 192.168.0.0/16 cho mạng riêng. Địa chỉ 172.20.15.8 thuộc dải 172.16.0.0–172.31.255.255; 172.32.1.5 nằm ngoài dải này."
+  },
+  {
+    "id": 10,
+    "type": "multiple_choice",
+    "topic": "Chủ đề B: Mạng máy tính",
+    "question": "Trong mạng của một trường học, quản trị viên muốn đặt quy tắc cho phép hoặc chặn lưu lượng mạng dựa trên các tiêu chí bảo mật. Thiết bị hoặc chức năng nào phù hợp nhất?",
+    "options": [
+      "Bộ lặp tín hiệu (Repeater)",
+      "Bộ chuyển mạch không quản lý",
+      "Tường lửa (Firewall)",
+      "Cáp mạng Ethernet"
+    ],
+    "answer": 2,
+    "explanation": "Tường lửa áp dụng các quy tắc để cho phép hoặc chặn lưu lượng mạng. Quy tắc có thể xét địa chỉ IP, cổng và giao thức. Repeater chỉ khuếch đại/tái tạo tín hiệu; cáp mạng là môi trường truyền dẫn."
+  },
+  {
+    "id": 11,
+    "type": "multiple_choice",
+    "topic": "Chủ đề B: Mạng máy tính",
+    "question": "Một ứng dụng cần truyền dữ liệu qua mạng với yêu cầu dữ liệu đến đúng thứ tự và có cơ chế phát hiện mất gói, truyền lại khi cần. Trong mô hình TCP/IP truyền thống, giao thức tầng vận chuyển nào phù hợp nhất?",
+    "options": [
+      "UDP",
+      "TCP",
+      "ARP",
+      "DHCP"
+    ],
+    "answer": 1,
+    "explanation": "TCP cung cấp dịch vụ truyền luồng byte tin cậy và đúng thứ tự; cơ chế số thứ tự, xác nhận và truyền lại giúp xử lý mất dữ liệu. UDP có cơ chế đơn giản hơn và không bảo đảm giao hàng hoặc thứ tự. ARP và DHCP không phải giao thức vận chuyển cho yêu cầu này."
+  },
+  {
+    "id": 12,
+    "type": "multiple_choice",
+    "topic": "Chủ đề B: Mạng máy tính",
+    "question": "Trong cùng một mạng LAN, hai máy tính cùng được cấu hình địa chỉ IPv4 192.168.1.20 và thường xuyên mất kết nối hoặc kết nối chập chờn. Cách xử lý phù hợp nhất là gì?",
+    "options": [
+      "Đặt hai máy dùng chung một địa chỉ IP để đồng bộ",
+      "Đổi tên miền của website đang truy cập",
+      "Cấu hình lại để mỗi máy sử dụng một địa chỉ IP duy nhất trong mạng",
+      "Tắt hoàn toàn tường lửa trên tất cả máy tính"
+    ],
+    "answer": 2,
+    "explanation": "Hai thiết bị cùng sử dụng một địa chỉ IPv4 trên cùng liên kết mạng có thể gây xung đột địa chỉ, làm việc phân giải ARP và truyền thông không ổn định. Cần xác định thiết bị bị trùng và cấu hình địa chỉ IP duy nhất cho từng máy."
+  },
+  {
+    "id": 13,
+    "type": "true_false",
+    "topic": "Chủ đề B: Mạng máy tính",
+    "question": "Xét chức năng của hai dịch vụ mạng DHCP và DNS trong mạng máy tính. Mỗi nhận định sau đây là đúng hay sai?",
+    "items": [
+      {
+        "label": "a",
+        "statement": "DNS giúp phân giải tên miền thành địa chỉ IP tương ứng.",
+        "answer": true
+      },
+      {
+        "label": "b",
+        "statement": "DHCP có thể tự động cấp phát địa chỉ IP và một số thông số cấu hình mạng cho máy khách.",
+        "answer": true
+      },
+      {
+        "label": "c",
+        "statement": "DNS là dịch vụ chịu trách nhiệm cấp phát địa chỉ IP động cho máy tính vừa kết nối mạng.",
+        "answer": false
+      },
+      {
+        "label": "d",
+        "statement": "DHCP có chức năng chính là mã hóa nội dung trang web giữa trình duyệt và máy chủ.",
+        "answer": false
+      }
+    ],
+    "explanation": "a đúng: DNS phân giải tên miền thành địa chỉ IP. b đúng: DHCP cấp phát địa chỉ IP và có thể cung cấp các thông số cấu hình mạng. c sai: cấp phát cấu hình IP là chức năng của DHCP, không phải DNS. d sai: DHCP không mã hóa nội dung web; HTTPS/TLS đảm nhiệm bảo vệ dữ liệu truyền tải web."
+  },
+  {
+    "id": 14,
+    "type": "true_false",
+    "topic": "Chủ đề B: Mạng máy tính",
+    "question": "Xét cách switch lớp 2 học địa chỉ MAC và xử lý khung Ethernet khi chưa biết địa chỉ đích. Mỗi nhận định sau đây là đúng hay sai?",
+    "items": [
+      {
+        "label": "a",
+        "statement": "Switch có thể học địa chỉ MAC nguồn cùng cổng nhận khung để cập nhật bảng địa chỉ MAC.",
+        "answer": true
+      },
+      {
+        "label": "b",
+        "statement": "Nếu địa chỉ MAC đích đã có trong bảng, switch có thể chuyển khung ra cổng tương ứng.",
+        "answer": true
+      },
+      {
+        "label": "c",
+        "statement": "Nếu chưa biết địa chỉ MAC đích, switch lớp 2 luôn loại bỏ khung ngay mà không chuyển tiếp.",
+        "answer": false
+      },
+      {
+        "label": "d",
+        "statement": "Khi địa chỉ MAC đích chưa có trong bảng, switch có thể phát tán khung ra các cổng khác trong cùng VLAN, ngoại trừ cổng nhận.",
+        "answer": true
+      }
+    ],
+    "explanation": "a đúng: switch học địa chỉ MAC nguồn và cổng nhận. b đúng: địa chỉ đích đã biết được ánh xạ sang cổng ra trong bảng MAC. c sai: địa chỉ đích chưa biết thường dẫn đến flooding trong cùng VLAN, không phải luôn loại bỏ. d đúng: switch phát tán khung đến các cổng khác trong VLAN, không gửi ngược lại cổng nhận."
+  },
+  {
+    "id": 15,
+    "type": "true_false",
+    "topic": "Chủ đề B: Mạng máy tính",
+    "question": "Một máy tính có địa chỉ 192.168.10.25/24. Xét ý nghĩa của địa chỉ mạng và subnet mask. Mỗi nhận định sau đây là đúng hay sai?",
+    "items": [
+      {
+        "label": "a",
+        "statement": "Ký hiệu /24 cho biết 24 bit đầu tiên của địa chỉ được dùng làm phần mạng.",
+        "answer": true
+      },
+      {
+        "label": "b",
+        "statement": "Địa chỉ mạng tương ứng của 192.168.10.25/24 là 192.168.10.0.",
+        "answer": true
+      },
+      {
+        "label": "c",
+        "statement": "Địa chỉ 192.168.11.25/24 thuộc cùng mạng con với 192.168.10.25/24.",
+        "answer": false
+      },
+      {
+        "label": "d",
+        "statement": "Subnet mask được sử dụng để mã hóa nội dung dữ liệu truyền qua Internet.",
+        "answer": false
+      }
+    ],
+    "explanation": "a đúng: /24 biểu thị độ dài tiền tố mạng là 24 bit. b đúng: với mask 255.255.255.0, địa chỉ mạng là 192.168.10.0. c sai: octet thứ ba khác nhau nên hai địa chỉ thuộc hai mạng /24 khác nhau. d sai: subnet mask xác định phần mạng/phần máy chủ, không mã hóa dữ liệu."
+  },
+  {
+    "id": 16,
+    "type": "true_false",
+    "topic": "Chủ đề B: Mạng máy tính",
+    "question": "Một máy tính trong phòng thực hành cần gửi dữ liệu đến máy khác trong cùng mạng con và đến một máy chủ ở mạng khác. Xét vai trò của cổng mặc định (default gateway). Mỗi nhận định sau đây là đúng hay sai?",
+    "items": [
+      {
+        "label": "a",
+        "statement": "Khi đích nằm trong cùng mạng con, máy tính có thể gửi dữ liệu trực tiếp đến thiết bị đích mà không cần chuyển qua default gateway.",
+        "answer": true
+      },
+      {
+        "label": "b",
+        "statement": "Khi đích nằm ngoài mạng con cục bộ, máy tính thường gửi gói tin đến default gateway để được định tuyến tiếp.",
+        "answer": true
+      },
+      {
+        "label": "c",
+        "statement": "Default gateway có chức năng chính là chuyển đổi tên miền thành địa chỉ IP.",
+        "answer": false
+      },
+      {
+        "label": "d",
+        "statement": "Default gateway và máy chủ DNS luôn là cùng một dịch vụ và không thể tách riêng.",
+        "answer": false
+      }
+    ],
+    "explanation": "a đúng: thiết bị cùng subnet có thể liên lạc trực tiếp ở mạng cục bộ. b đúng: lưu lượng đến mạng khác thường được gửi đến router/default gateway. c sai: phân giải tên miền là chức năng DNS. d sai: default gateway và DNS là hai vai trò mạng khác nhau, dù trong một số mạng chúng có thể cùng nằm trên một thiết bị."
+  },
+  {
+    "id": 17,
+    "type": "multiple_choice",
+    "topic": "Chủ đề F: Hệ cơ sở dữ liệu",
+    "question": "Trong một bảng của cơ sở dữ liệu quan hệ, mỗi hàng dữ liệu thường biểu diễn thành phần nào?",
+    "options": [
+      "Một bản ghi (record)",
+      "Một thuộc tính (attribute)",
+      "Một cơ sở dữ liệu độc lập",
+      "Một câu lệnh SQL"
+    ],
+    "answer": 0,
+    "explanation": "Trong bảng quan hệ, mỗi hàng biểu diễn một bản ghi (record/tuple), còn mỗi cột biểu diễn một trường hoặc thuộc tính (field/attribute)."
+  },
+  {
+    "id": 18,
+    "type": "multiple_choice",
+    "topic": "Chủ đề F: Hệ cơ sở dữ liệu",
+    "question": "Cơ sở dữ liệu có hai bảng KhachHang(MaKH, HoTen) và DonHang(MaDH, NgayDat, MaKH). Nếu MaKH là khóa chính của bảng KhachHang, MaKH trong bảng DonHang thường được dùng làm gì?",
+    "options": [
+      "Khóa chính để mỗi đơn hàng có mã khách hàng duy nhất",
+      "Khóa ngoại tham chiếu đến MaKH trong bảng KhachHang",
+      "Thuộc tính để tự động tính tổng tiền đơn hàng",
+      "Thuộc tính để sắp xếp tên khách hàng theo alphabet"
+    ],
+    "answer": 1,
+    "explanation": "MaKH trong DonHang là khóa ngoại tham chiếu đến khóa chính MaKH của KhachHang. Nhờ đó, mỗi đơn hàng được liên kết với khách hàng tương ứng và cơ sở dữ liệu có thể duy trì tính toàn vẹn tham chiếu."
+  },
+  {
+    "id": 19,
+    "type": "multiple_choice",
+    "topic": "Chủ đề F: Hệ cơ sở dữ liệu",
+    "question": "Trong câu lệnh SQL `SELECT HoTen FROM HocSinh WHERE Diem >= 8;`, mệnh đề WHERE có tác dụng gì?",
+    "options": [
+      "Sắp xếp học sinh theo họ tên",
+      "Chỉ lấy các bản ghi có điểm từ 8 trở lên",
+      "Xóa các học sinh có điểm dưới 8",
+      "Thêm một học sinh mới có điểm bằng 8"
+    ],
+    "answer": 1,
+    "explanation": "WHERE đặt điều kiện lọc các hàng. Câu lệnh chỉ truy xuất cột HoTen của những học sinh có Diem lớn hơn hoặc bằng 8; câu lệnh không xóa hay thêm dữ liệu."
+  },
+  {
+    "id": 20,
+    "type": "multiple_choice",
+    "topic": "Chủ đề F: Hệ cơ sở dữ liệu",
+    "question": "Trong câu lệnh `SELECT HoTen, Diem FROM HocSinh ORDER BY Diem DESC;`, kết quả được sắp xếp như thế nào?",
+    "options": [
+      "Theo họ tên từ A đến Z",
+      "Theo điểm từ thấp đến cao",
+      "Theo điểm từ cao xuống thấp",
+      "Chỉ hiển thị học sinh có điểm cao nhất"
+    ],
+    "answer": 2,
+    "explanation": "ORDER BY sắp xếp các hàng theo cột được chỉ định. DESC là thứ tự giảm dần, nên điểm cao được hiển thị trước; câu lệnh không giới hạn chỉ một học sinh."
+  },
+  {
+    "id": 21,
+    "type": "multiple_choice",
+    "topic": "Chủ đề F: Hệ cơ sở dữ liệu",
+    "question": "Một giáo viên muốn thêm một học sinh mới vào bảng HocSinh. Câu lệnh SQL nào phù hợp để chèn một bản ghi mới?",
+    "options": [
+      "INSERT INTO HocSinh(MaHS, HoTen, Diem) VALUES ('HS02', 'Lan', 9);",
+      "UPDATE HocSinh SET HoTen = 'Lan' WHERE MaHS = 'HS02';",
+      "DELETE FROM HocSinh WHERE MaHS = 'HS02';",
+      "SELECT HoTen FROM HocSinh WHERE MaHS = 'HS02';"
+    ],
+    "answer": 0,
+    "explanation": "INSERT INTO được dùng để thêm một bản ghi mới vào bảng. Danh sách cột cho biết các trường được chèn và VALUES cung cấp giá trị tương ứng. UPDATE sửa bản ghi đã có; DELETE xóa bản ghi; SELECT truy xuất dữ liệu."
+  },
+  {
+    "id": 22,
+    "type": "multiple_choice",
+    "topic": "Chủ đề F: Hệ cơ sở dữ liệu",
+    "question": "Bảng HocSinh có các cột MaHS, HoTen, Diem. Muốn lấy họ tên của những học sinh có điểm từ 8 trở lên, câu lệnh nào đúng?",
+    "options": [
+      "SELECT HoTen FROM HocSinh WHERE Diem >= 8;",
+      "DELETE HoTen FROM HocSinh WHERE Diem >= 8;",
+      "UPDATE HocSinh SET HoTen WHERE Diem >= 8;",
+      "INSERT INTO HocSinh(HoTen) WHERE Diem >= 8;"
+    ],
+    "answer": 0,
+    "explanation": "SELECT HoTen chỉ định cột cần lấy; FROM HocSinh xác định bảng; WHERE Diem >= 8 lọc các hàng thỏa điều kiện. Các phương án còn lại dùng sai cú pháp hoặc sai mục đích thao tác."
+  },
+  {
+    "id": 23,
+    "type": "true_false",
+    "topic": "Chủ đề F: Hệ cơ sở dữ liệu",
+    "question": "Một cửa hàng có bảng KhachHang và bảng DonHang, trong đó mỗi khách hàng có thể đặt nhiều đơn hàng. Xét quan hệ giữa hai bảng. Mỗi nhận định sau đây là đúng hay sai?",
+    "items": [
+      {
+        "label": "a",
+        "statement": "Một khách hàng có thể liên kết với nhiều bản ghi đơn hàng khác nhau.",
+        "answer": true
+      },
+      {
+        "label": "b",
+        "statement": "Trong quan hệ một-nhiều, khóa ngoại thường được đặt ở bảng thuộc phía nhiều, ở tình huống này là bảng DonHang.",
+        "answer": true
+      },
+      {
+        "label": "c",
+        "statement": "MaKH trong bảng DonHang bắt buộc phải có giá trị khác nhau ở mọi đơn hàng, kể cả khi một khách hàng đặt nhiều đơn.",
+        "answer": false
+      },
+      {
+        "label": "d",
+        "statement": "Quan hệ một-nhiều có nghĩa là mỗi khách hàng chỉ được phép có tối đa một đơn hàng.",
+        "answer": false
+      }
+    ],
+    "explanation": "a đúng: một khách hàng có thể đặt nhiều đơn. b đúng: khóa ngoại thường nằm ở phía nhiều. c sai: MaKH được phép lặp trong DonHang để thể hiện nhiều đơn cùng thuộc một khách hàng. d sai: phát biểu mô tả quan hệ một-một, không phải một-nhiều."
+  },
+  {
+    "id": 24,
+    "type": "true_false",
+    "topic": "Chủ đề F: Hệ cơ sở dữ liệu",
+    "question": "Xét khóa ngoại MaKH trong bảng DonHang tham chiếu đến khóa chính MaKH trong bảng KhachHang. Mỗi nhận định sau đây là đúng hay sai?",
+    "items": [
+      {
+        "label": "a",
+        "statement": "Khóa ngoại MaKH trong DonHang có thể lặp lại nếu một khách hàng có nhiều đơn hàng.",
+        "answer": true
+      },
+      {
+        "label": "b",
+        "statement": "Khi ràng buộc được thực thi và giá trị khóa ngoại không phải NULL, giá trị đó phải khớp với một giá trị được tham chiếu trong bảng KhachHang.",
+        "answer": true
+      },
+      {
+        "label": "c",
+        "statement": "Mọi cột khóa ngoại đều mặc nhiên phải có giá trị duy nhất trong bảng chứa nó.",
+        "answer": false
+      },
+      {
+        "label": "d",
+        "statement": "Khóa ngoại được sử dụng chủ yếu để sắp xếp dữ liệu theo thứ tự chữ cái.",
+        "answer": false
+      }
+    ],
+    "explanation": "a đúng: khóa ngoại không mặc nhiên phải duy nhất. b đúng: ràng buộc khóa ngoại bảo đảm tính toàn vẹn tham chiếu; nếu cột cho phép NULL thì giá trị NULL không tham chiếu đến một hàng cụ thể. c sai: chỉ khi có thêm ràng buộc UNIQUE mới yêu cầu không trùng. d sai: khóa ngoại biểu diễn liên kết giữa các bảng, không phải chức năng sắp xếp."
+  },
+  {
+    "id": 25,
+    "type": "true_false",
+    "topic": "Chủ đề F: Hệ cơ sở dữ liệu",
+    "question": "Xét các câu lệnh DELETE trong SQL khi làm việc với bảng HocSinh. Mỗi nhận định sau đây là đúng hay sai?",
+    "items": [
+      {
+        "label": "a",
+        "statement": "Câu lệnh `DELETE FROM HocSinh WHERE MaLop = '12A1';` xóa những bản ghi thỏa mãn điều kiện MaLop = '12A1'.",
+        "answer": true
+      },
+      {
+        "label": "b",
+        "statement": "Câu lệnh `DELETE FROM HocSinh;` xóa cả cấu trúc bảng HocSinh khỏi cơ sở dữ liệu.",
+        "answer": false
+      },
+      {
+        "label": "c",
+        "statement": "Nếu không có WHERE, `DELETE FROM HocSinh;` có thể xóa toàn bộ các hàng dữ liệu nhưng không xóa cấu trúc bảng.",
+        "answer": true
+      },
+      {
+        "label": "d",
+        "statement": "Nếu bỏ WHERE khỏi câu lệnh DELETE, hệ quản trị chỉ xóa bản ghi đầu tiên trong bảng.",
+        "answer": false
+      }
+    ],
+    "explanation": "a đúng: WHERE giới hạn các hàng bị xóa. b sai: DELETE xóa dữ liệu, không xóa định nghĩa bảng. c đúng: không có WHERE thì tất cả hàng trong bảng là đối tượng bị xóa. d sai: câu lệnh không có WHERE không chỉ xóa hàng đầu tiên."
+  },
+  {
+    "id": 26,
+    "type": "true_false",
+    "topic": "Chủ đề F: Hệ cơ sở dữ liệu",
+    "question": "Xét câu lệnh cập nhật điểm `UPDATE HocSinh SET Diem = 9 WHERE MaHS = 'HS001';`. Mỗi nhận định sau đây là đúng hay sai?",
+    "items": [
+      {
+        "label": "a",
+        "statement": "Mệnh đề SET chỉ định cột và giá trị mới cần cập nhật.",
+        "answer": true
+      },
+      {
+        "label": "b",
+        "statement": "Mệnh đề WHERE giới hạn việc cập nhật vào bản ghi có MaHS = 'HS001'.",
+        "answer": true
+      },
+      {
+        "label": "c",
+        "statement": "Nếu bỏ WHERE, câu lệnh UPDATE trên có thể cập nhật điểm của tất cả bản ghi trong bảng.",
+        "answer": true
+      },
+      {
+        "label": "d",
+        "statement": "UPDATE là câu lệnh dùng để thêm một bản ghi mới vào bảng.",
+        "answer": false
+      }
+    ],
+    "explanation": "a đúng: SET khai báo giá trị mới. b đúng: WHERE chọn các hàng cần thay đổi. c đúng: nếu bỏ WHERE, mọi hàng trong bảng có thể bị cập nhật. d sai: INSERT INTO dùng để thêm bản ghi; UPDATE sửa dữ liệu đã có."
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "id": "./",
+  "name": "Ôn Tập Tin Học 12 - PWA Ngoại Tuyến",
+  "short_name": "TinHoc12",
+  "description": "Ứng dụng ôn tập Tin học 12, nạp đề Word/văn bản và hỗ trợ học tập ngoại tuyến.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#1976d2",
+  "icons": [
+    {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
