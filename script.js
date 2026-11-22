@@ -705,67 +705,26 @@ async function extractDocxText(arrayBuffer) {
 }
 
 async function extractDocxDocumentXml(arrayBuffer) {
-  const bytes = new Uint8Array(arrayBuffer);
-  const view = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength);
-  const EOCD_SIGNATURE = 0x06054b50;
-  const CENTRAL_SIGNATURE = 0x02014b50;
-  const LOCAL_SIGNATURE = 0x04034b50;
-
-  let eocdOffset = -1;
-  const minimum = Math.max(0, bytes.length - 22 - 65535);
-  for (let offset = bytes.length - 22; offset >= minimum; offset -= 1) {
-    if (view.getUint32(offset, true) === EOCD_SIGNATURE) {
-      eocdOffset = offset;
-      break;
-    }
+  if (!(arrayBuffer instanceof ArrayBuffer) || arrayBuffer.byteLength < 22) {
+    throw new Error("Tệp DOCX rỗng hoặc không hợp lệ.");
   }
-  if (eocdOffset < 0) throw new Error("Gói DOCX không có cấu trúc ZIP hợp lệ.");
 
-  const entryCount = view.getUint16(eocdOffset + 10, true);
-  const centralDirectoryOffset = view.getUint32(eocdOffset + 16, true);
-  let cursor = centralDirectoryOffset;
-
-  for (let index = 0; index < entryCount; index += 1) {
-    if (cursor + 46 > bytes.length || view.getUint32(cursor, true) !== CENTRAL_SIGNATURE) {
-      throw new Error("Bảng thư mục ZIP của DOCX bị lỗi hoặc không được hỗ trợ.");
-    }
-
-    const method = view.getUint16(cursor + 10, true);
-    const compressedSize = view.getUint32(cursor + 20, true);
-    const fileNameLength = view.getUint16(cursor + 28, true);
-    const extraLength = view.getUint16(cursor + 30, true);
-    const commentLength = view.getUint16(cursor + 32, true);
-    const localHeaderOffset = view.getUint32(cursor + 42, true);
-
-    const fileNameStart = cursor + 46;
-    const fileName = new TextDecoder("utf-8").decode(bytes.subarray(fileNameStart, fileNameStart + fileNameLength));
-
-    if (fileName === "word/document.xml") {
-      if (view.getUint32(localHeaderOffset, true) !== LOCAL_SIGNATURE) {
-        throw new Error("Local file header của document.xml không hợp lệ.");
-      }
-      const localNameLength = view.getUint16(localHeaderOffset + 26, true);
-      const localExtraLength = view.getUint16(localHeaderOffset + 28, true);
-      const dataStart = localHeaderOffset + 30 + localNameLength + localExtraLength;
-      const compressedData = bytes.subarray(dataStart, dataStart + compressedSize);
-
-      if (method === 0) return new TextDecoder("utf-8").decode(compressedData);
-      if (method !== 8) throw new Error(`Thuật toán nén ZIP ${method} chưa được hỗ trợ.`);
-      if (typeof DecompressionStream === "undefined") {
-        throw new Error("Trình duyệt không hỗ trợ DecompressionStream để giải nén DOCX.");
-      }
-
-      const decompressor = new DecompressionStream("deflate-raw");
-      const writer = decompressor.writable.getWriter();
-      await writer.write(compressedData);
-      await writer.close();
-      const decompressed = await new Response(decompressor.readable).arrayBuffer();
-      return new TextDecoder("utf-8").decode(decompressed);
-    }
-
-    cursor += 46 + fileNameLength + extraLength + commentLength;
+  const sig = new Uint8Array(arrayBuffer, 0, 2);
+  if (sig[0] !== 0x50 || sig[1] !== 0x4b) {
+    throw new Error("Tệp không phải định dạng DOCX chuẩn. Hãy lưu lại bằng Word dưới dạng .docx.");
   }
-  return null;
+
+  if (typeof JSZip === "undefined") {
+    throw new Error("Chưa tải được JSZip. Hãy kiểm tra thẻ <script> JSZip trong HTML.");
+  }
+
+  const zip = await JSZip.loadAsync(arrayBuffer);
+  const docFile = zip.file("word/document.xml");
+  if (!docFile) {
+    throw new Error("Không tìm thấy word/document.xml trong gói DOCX.");
+  }
+
+  return await docFile.async("string");
 }
 
 function normalizeExamText(rawText) {
